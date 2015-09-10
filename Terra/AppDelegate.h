@@ -7,9 +7,13 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "Photo.h"
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 
+@property (nonatomic, strong) Photo *photo;
+@property (nonatomic, assign) bool state;
+@property (nonatomic, assign) int *oldId;
 
 @end
 
