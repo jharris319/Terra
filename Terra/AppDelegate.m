@@ -34,42 +34,32 @@
 }
 
 - (void)startTimer {
-	[self performSelector:@selector(updatePhoto) withObject:nil afterDelay:1.0 ];
+	[self performSelector:@selector(updatePhoto) withObject:nil afterDelay:1800 ];
 }
 
 - (void)updatePhoto {
 	
 	NSArray *screenArray = [NSScreen screens];
 	
-	[[NSFileManager defaultManager] removeItemAtPath:[NSString stringWithFormat:@"/Users/jonathan/Terra/%d.jpg", self.photo._id] error:nil];
+	NSString *photoPath = [NSString stringWithFormat:@"%@/Pictures/%d.jpg", NSHomeDirectory(), self.photo._id];
+
 	AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
 	[manager GET:[NSString stringWithFormat:@"http://earthview.withgoogle.com/%@", self.photo.nextApi] parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
 		self.photo = [[Photo alloc] initWithDictionary:responseObject];
-		
-		
-		
-		
 		NSData* imageData = [NSData dataWithContentsOfURL:self.photo.photoUrl];
-		
-		[imageData writeToFile:[NSString stringWithFormat:@"/Users/jonathan/Terra/%d.jpg", self.photo._id] atomically:YES];
+		[imageData writeToFile:photoPath atomically:YES];
 		
 		for (NSScreen *screen in screenArray) {
-			
 			NSDictionary *screenOptions = [[NSWorkspace sharedWorkspace] desktopImageOptionsForScreen:[screenArray objectAtIndex:0]];
-			
-			[[NSWorkspace sharedWorkspace] setDesktopImageURL:[NSURL fileURLWithPath:[NSString stringWithFormat:@"/Users/jonathan/Terra/%d.jpg", self.photo._id]] forScreen:screen options:screenOptions error:nil];
-			
-			
-			
-			
-			
-			
+			[[NSWorkspace sharedWorkspace] setDesktopImageURL:[NSURL fileURLWithPath:photoPath] forScreen:screen options:screenOptions error:nil];
 		}
+		[[NSFileManager defaultManager] removeItemAtPath:photoPath error:nil];
 		[self startTimer];
 		
 		NSLog(@"JSON: %@", responseObject);
 	} failure:^(AFHTTPRequestOperation *operation, NSError *error) {
 		NSLog(@"Error: %@", error);
+		[self startTimer];
 	}];
 	
 	
