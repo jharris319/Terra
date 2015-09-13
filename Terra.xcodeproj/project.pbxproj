@@ -10,10 +10,12 @@
 		328B70CD01E579769BB0BFC7 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F902663B72DF1517E376565 /* libPods.a */; };
 		AB55C4121BA110F700A9F05D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AB55C4111BA110F700A9F05D /* AppDelegate.m */; };
 		AB55C4141BA110F700A9F05D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AB55C4131BA110F700A9F05D /* main.m */; };
-		AB55C4191BA110F700A9F05D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB55C4181BA110F700A9F05D /* Images.xcassets */; };
 		AB55C41C1BA110F700A9F05D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB55C41A1BA110F700A9F05D /* Main.storyboard */; };
 		AB55C4281BA110F800A9F05D /* TerraTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AB55C4271BA110F800A9F05D /* TerraTests.m */; };
 		AB55C4341BA112F500A9F05D /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = AB55C4331BA112F500A9F05D /* Photo.m */; };
+		ABD33A361BA6235E0094AA6D /* earth16-black.png in Resources */ = {isa = PBXBuildFile; fileRef = ABD33A341BA6235E0094AA6D /* earth16-black.png */; };
+		ABD33A371BA6235E0094AA6D /* earth16-white.png in Resources */ = {isa = PBXBuildFile; fileRef = ABD33A351BA6235E0094AA6D /* earth16-white.png */; };
+		ABD33A3D1BA63FF70094AA6D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABD33A3C1BA63FF70094AA6D /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,13 +36,15 @@
 		AB55C4101BA110F700A9F05D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		AB55C4111BA110F700A9F05D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		AB55C4131BA110F700A9F05D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		AB55C4181BA110F700A9F05D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		AB55C41B1BA110F700A9F05D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AB55C4211BA110F700A9F05D /* TerraTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TerraTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB55C4261BA110F800A9F05D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AB55C4271BA110F800A9F05D /* TerraTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TerraTests.m; sourceTree = "<group>"; };
 		AB55C4321BA112F500A9F05D /* Photo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Photo.h; sourceTree = "<group>"; };
 		AB55C4331BA112F500A9F05D /* Photo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Photo.m; sourceTree = "<group>"; };
+		ABD33A341BA6235E0094AA6D /* earth16-black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "earth16-black.png"; sourceTree = "<group>"; };
+		ABD33A351BA6235E0094AA6D /* earth16-white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "earth16-white.png"; sourceTree = "<group>"; };
+		ABD33A3C1BA63FF70094AA6D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F407600542035B977C5B8D59 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -94,12 +98,13 @@
 		AB55C40D1BA110F700A9F05D /* Terra */ = {
 			isa = PBXGroup;
 			children = (
+				ABD33A331BA623550094AA6D /* Images */,
 				AB55C4311BA112D300A9F05D /* Models */,
 				AB55C4101BA110F700A9F05D /* AppDelegate.h */,
 				AB55C4111BA110F700A9F05D /* AppDelegate.m */,
-				AB55C4181BA110F700A9F05D /* Images.xcassets */,
 				AB55C41A1BA110F700A9F05D /* Main.storyboard */,
 				AB55C40E1BA110F700A9F05D /* Supporting Files */,
+				ABD33A3C1BA63FF70094AA6D /* Images.xcassets */,
 			);
 			path = Terra;
 			sourceTree = "<group>";
@@ -137,6 +142,15 @@
 				AB55C4331BA112F500A9F05D /* Photo.m */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		ABD33A331BA623550094AA6D /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				ABD33A341BA6235E0094AA6D /* earth16-black.png */,
+				ABD33A351BA6235E0094AA6D /* earth16-white.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 		C97205E033119F98509A7AE3 /* Pods */ = {
@@ -230,8 +244,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AB55C4191BA110F700A9F05D /* Images.xcassets in Resources */,
 				AB55C41C1BA110F700A9F05D /* Main.storyboard in Resources */,
+				ABD33A3D1BA63FF70094AA6D /* Images.xcassets in Resources */,
+				ABD33A361BA6235E0094AA6D /* earth16-black.png in Resources */,
+				ABD33A371BA6235E0094AA6D /* earth16-white.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,8 +12,11 @@
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 
 @property (nonatomic, strong) Photo *photo;
+@property (nonatomic, strong) NSMutableArray *photoArray;
 @property (nonatomic, assign) bool state;
 @property (nonatomic, assign) int *oldId;
+
+@property (strong, nonatomic) NSStatusItem *statusItem;
 
 @end
 
